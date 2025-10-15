@@ -21,7 +21,7 @@ app.use(express.static('public'));
 
 // Explicit route to serve index.html for root path
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 // Multer configuration for file uploads
